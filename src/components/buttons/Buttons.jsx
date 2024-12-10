@@ -22,4 +22,4 @@ const Buttons = ({setData}) => {
   )
 }
 
-export default Buttons
+export default Buttons;

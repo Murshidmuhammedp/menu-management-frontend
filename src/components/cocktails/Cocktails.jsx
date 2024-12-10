@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Img1 from "../../assets/chayya.png";
-import api from "../../api/axiosInstance";
 import Img2 from "../../assets/cocktail1 1.png";
-import { useQuery } from "@tanstack/react-query";
 
 const Cocktails = ({ data }) => {
-  // console.log(data, "Cocktails data");
   const cocktailData = Array.isArray(data) ? data : [];
 
   return (
@@ -25,10 +22,8 @@ const Cocktails = ({ data }) => {
           <p className="font-extrabold">___</p>
         </div>
       </div>
+
       {/* Drink List */}
-
-
-
       <div className="text-white p-10 grid grid-cols-1 md:grid-cols-2 gap-8 ">
         {cocktailData?.map((i, index) => (
           <div key={index} className="">
@@ -50,11 +45,6 @@ const Cocktails = ({ data }) => {
           <img src={Img2} alt="" className="md:w-40 md:h-48 w-16 h-20" />
         </div>
       </div>
-
-
-
-
-
     </div>
   );
 };

@@ -13,9 +13,8 @@ const Category = ({ data }) => {
   return (
     <div
       className="max-w-full flex justify-between pt-5 h-[600px] md:h-[800px]" // Set fixed height
-      style={backimage}
-    >
-      {/* Left-Side Image */}
+      style={backimage}>
+
       <div className="h-full w-[20%] md:flex hidden flex-col gap-4">
         {leftImage.map((i) => (
           <img
@@ -26,14 +25,12 @@ const Category = ({ data }) => {
         ))}
       </div>
 
-      {/* Center */}
       <div className="md:max-w-[90%] w-full p-8">
         <div className="w-full">
           <Cocktails data={data} />
         </div>
       </div>
 
-      {/* Right-Side Image */}
       <div className="h-full w-[20%] hidden md:flex flex-col gap-4">
         {rightImage.map((i) => (
           <img

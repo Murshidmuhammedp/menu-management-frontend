@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Logo from '../../assets/Logo.png'; // Adjust the path if necessary
+import Logo from '../../assets/Logo.png';
 
-// Framer Motion animation variants
 const variants = {
   open: { opacity: 1, x: 0 },
   closed: { opacity: 0, x: '-100%' },
 };
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Menu open/close state
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="">
-      <nav className="bg-[#121618] relative z-10"> {/* Ensure the navbar has a higher z-index */}
+      <nav className="bg-[#121618] relative z-10">
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
-          <img src={Logo} alt="Logo" className="w-12 h-auto" /> {/* Adjust logo size */}
+          <img src={Logo} alt="Logo" className="w-12 h-auto" /> 
 
           {/* Hamburger menu for mobile */}
           <button
             className="text-white md:hidden focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)} // Toggle the menu state
+            onClick={() => setIsOpen(!isOpen)} 
           >
             {/* Simple hamburger icon */}
             <svg
@@ -52,13 +51,13 @@ const Navbar = () => {
         {/* Mobile Menu with Animation */}
         <motion.div
           className={`md:hidden bg-[#121618] fixed top-0 left-0 w-full h-screen flex flex-col items-start p-8 transition-transform duration-300 ${isOpen ? 'block' : 'hidden'}`}
-          initial={false} // Skips initial animation
-          animate={isOpen ? 'open' : 'closed'} // Controls menu animation based on `isOpen`
-          variants={variants} // Applies the Framer Motion animation variants
+          initial={false}
+          animate={isOpen ? 'open' : 'closed'}
+          variants={variants}
         >
           <button
             className="text-white mb-8"
-            onClick={() => setIsOpen(false)} // Close the menu
+            onClick={() => setIsOpen(false)}
           >
             {/* Close button */}
             <svg

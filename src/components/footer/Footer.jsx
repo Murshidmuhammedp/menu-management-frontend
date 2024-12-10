@@ -7,10 +7,10 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-black pt-5">
+    <div className="bg-black pt-5 min-h-screen flex flex-col justify-between">
       {/* MainPart */}
-      <div className="flex md:flex-row flex-col justify-center p-2 mb-7 md:gap-3 gap-5 ">
-        <div className=" border border-1 border-white rounded-lg text-center px-16 p-2 order-2 md:order-1">
+      <div className="flex md:flex-row flex-col justify-center p-2 mb-7 md:gap-3 gap-5">
+        <div className="border border-1 border-white rounded-lg text-center px-16 p-2 order-2 md:order-1">
           <p className="text-[#0796EF] mt-2 mb-3 font-bold text-lg font-sans">
             CONNECT WITH US
           </p>
@@ -42,7 +42,7 @@ const Footer = () => {
             <FaInstagram color="#808080" size={20} />
           </div>
         </div>
-        <div className=" border border-1 border-white rounded-lg text-center px-16 p-2 md:w-80 h-36 order-3">
+        <div className="border border-1 border-white rounded-lg text-center px-16 p-2 md:w-80 h-36 order-3">
           <p className="text-[#0796EF] mt-2 mb-3 font-bold text-lg font-sans">
             FIND US
           </p>
@@ -52,7 +52,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* copy right  */}
+
+      {/* Copy Right */}
       <div className="bg-[#171616] w-full md:h-7 text-center md:flex text-[#857878] md:flex-row justify-between md:px-32 items-center">
         <div>
           <p className="md:text-sm text-xs">

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+ background-color: #121618;
+ font-family: "Oswald", sans-serif;
+ font-optical-sizing: auto;
+}
+.custom-shadow {
+    text-shadow: 2px 4px 6px rgb(255, 44, 2);
+  }

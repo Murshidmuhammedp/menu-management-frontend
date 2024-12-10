@@ -2,7 +2,7 @@ import { leftImage, rightImage } from '../../assets/image/leftImage';
 import BgImage from '../../assets/Rectangle 116.png';
 import Cocktails from '../cocktails/Cocktails';
 
-const Category = () => {
+const Category = ({ data }) => {
   const backimage = {
     backgroundImage: `url(${BgImage})`,
     backgroundSize: 'cover',
@@ -11,7 +11,7 @@ const Category = () => {
   };
 
   return (
-    <div 
+    <div
       className="max-w-full flex justify-between pt-5 h-[600px] md:h-[800px]" // Set fixed height
       style={backimage}
     >
@@ -29,7 +29,7 @@ const Category = () => {
       {/* Center */}
       <div className="md:max-w-[90%] w-full p-8">
         <div className="w-full">
-          <Cocktails />
+          <Cocktails data={data} />
         </div>
       </div>
 

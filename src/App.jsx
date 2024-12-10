@@ -11,14 +11,14 @@ import { HashLoader } from 'react-spinners'
 
 function App() {
 const [data,setData]=useState("")
-console.log(data,"data")
+console.log(data,"data kitnilla")
 
   return (
     <div>
       <Navbar />
       <Menu />
       <Buttons  setData={setData}/>
-      <Category  />
+      <Category  data={data}/>
       <Footer />
     </div>
   )

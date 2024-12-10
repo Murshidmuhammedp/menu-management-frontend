@@ -3,7 +3,6 @@ import useGetMenu from '../../hook/getMenu'
 
 const Buttons = ({setData}) => {
   const { data } = useGetMenu()
-  console.log(data, "datummm")
   const handleButton=(value)=>{
    setData(value)
   }
@@ -14,7 +13,7 @@ const Buttons = ({setData}) => {
         {data?.map((menu, index) => (
         <button 
         onClick={()=>handleButton(menu.items)}
-        className='px-6 p-2 bg-[#000000] border border-[#0796EF] hover:bg-blue-500'>
+        className='px-6 p-2 bg-[#000000] border border-[#0796EF] hover:bg-blue-800'>
           {menu.name}
         </button>
         ))}
